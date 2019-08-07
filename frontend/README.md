@@ -1,4 +1,4 @@
-# CryptoNative
+# CryptKeeper
 
 This projects is a crytocurrency dashboard with additional features (portfolio, data visualizations, etc).
 

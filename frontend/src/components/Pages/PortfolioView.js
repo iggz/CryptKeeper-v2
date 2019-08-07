@@ -142,39 +142,39 @@ class PortfolioView extends Component {
 
         return (
             <>
-                {this.state.isLoggedIn ? (
+                { this.state.isLoggedIn ? (
                     this.state.rerender ? (
-                        <BaseTemplate portfolioPage={portfolioPage}>
-                            <h1 style={{ background: '#0D5A71', margin: 0, height: 60, color: 'white', textAlign: 'center', padding: 10 }}>Portfolio View</h1>
+                        <BaseTemplate portfolioPage={ portfolioPage }>
+                            <h1 style={ { background: '#1e2632', margin: 0, height: 60, color: '#3F51B5', textAlign: 'center', padding: 10 } }>Portfolio View</h1>
                             <NewDonut
-                                data={this.state.coinValues}
-                                labels={this.state.coinLabels}
+                                data={ this.state.coinValues }
+                                labels={ this.state.coinLabels }
                             />
                             <TabPanelScroll
-                                labels={this.state.portfolioLabels}
-                                data={this.state.data}
-                                labelHandler={this.labelHandler}
+                                labels={ this.state.portfolioLabels }
+                                data={ this.state.data }
+                                labelHandler={ this.labelHandler }
                             />
-                            <div style={{ background: '#1e2632', height: 400 }}>
+                            <div style={ { background: '#1e2632', height: 400 } }>
                                 <AddCoinModal />
                             </div>
                         </BaseTemplate>
                     ) : (
-                            <BaseTemplate portfolioPage={portfolioPage}>
-                                <h1 style={{ background: '#0D5A71', margin: 0, height: 60, color: 'white', textAlign: 'center' }}>Portfolio View</h1>
+                            <BaseTemplate portfolioPage={ portfolioPage }>
+                                <h1 style={ { background: '#1e2632', margin: 0, height: 60, color: '#3F51B5', textAlign: 'center', padding: 10 } }>Portfolio View</h1>
                                 <TabPanelScroll
-                                    labels={this.state.portfolioLabels}
-                                    data={this.state.data}
-                                    labelHandler={this.labelHandler}
+                                    labels={ this.state.portfolioLabels }
+                                    data={ this.state.data }
+                                    labelHandler={ this.labelHandler }
                                 />
-                                <div style={{ background: '#1e2632', height: 400 }}></div>
+                                <div style={ { background: '#1e2632', height: 400 } }></div>
                             </BaseTemplate>)
                 ) : (
                         <BaseTemplate>
                             <h1>Portfolio List View</h1>
                             <p>You are currently not logged in. Please login or create a user and login.</p>
                         </BaseTemplate>
-                    )}
+                    ) }
             </>
         )
     }

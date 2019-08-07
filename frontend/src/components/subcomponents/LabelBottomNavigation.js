@@ -36,32 +36,32 @@ export default function LabelBottomNavigation() {
 
     return (
 
-        <BottomNavigation value={ value } onChange={ handleChange } className={ classes.root }>
-            <BottomNavigationAction
+        <BottomNavigation style={{color: '#00C689'}} value={ value } onChange={ handleChange } className={ classes.root }>
+            <BottomNavigationAction style={{color: '#00C689'}}
                 label="Dashboard"
                 value="dashboard"
-                icon={ <List /> }
+                icon={ <List style={{color: '#00C689'}}/> }
                 component={ Link }
                 to="/one"
             />
-            <BottomNavigationAction
+            <BottomNavigationAction style={{color: '#00C689'}}
                 label="Favorites"
                 value="favorites"
-                icon={ <FavoriteIcon /> }
+                icon={ <FavoriteIcon style={{color: '#00C689'}}/> }
                 component={ Link }
                 to="/two"
             />
-            <BottomNavigationAction
+            <BottomNavigationAction style={{color: '#00C689'}}
                 label="Portfolio"
                 value="portfolio"
-                icon={ <DonutLarge>folder</DonutLarge> }
+                icon={ <DonutLarge style={{color: '#00C689'}}>folder</DonutLarge> }
                 component={ Link }
                 to="/three"
             />
-            <BottomNavigationAction
+            <BottomNavigationAction style={{color: '#00C689'}}
                 label="Account"
                 value="account"
-                icon={ <AccountBox /> }
+                icon={ <AccountBox style={{color: '#00C689'}}/> }
                 component={ Link }
                 to="/four"
             />

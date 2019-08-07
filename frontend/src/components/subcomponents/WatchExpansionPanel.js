@@ -15,23 +15,23 @@ export default class WatchExpansionPanel extends React.Component {
     }
 
     render() {
-        // capitalize coin name
+        // capitalize coin names
         let coin = this.props.id;
-        coin = coin.substr(0, 1).toUpperCase() + coin.substr(1);
+        coin = coin.toUpperCase();
 
         return (
-            <div onClick={() => { this._fetchHistoricalData(this.props.id) }}>
-                <div style={{ width: '100%' }} >
-                    <ExpansionPanel >
+            <div onClick={ () => { this._fetchHistoricalData(this.props.id) } }>
+                <div style={ { color: '#09171E', width: '100%' } } >
+                    <ExpansionPanel style={ { background: '#09171E' } } >
                         <ExpansionPanelSummary
-                            expandIcon={<ExpandMoreIcon />}
+                            expandIcon={ <ExpandMoreIcon style={ { color: 'white' } } /> }
                             aria-controls="panel1a-content"
                             id="panel1a-header"
                         >
-                            <Typography style={{ fontSize: '1rem', fontWeight: '600' }}>{coin}</Typography>
+                            <Typography style={ { color: 'white', fontSize: '1rem', fontWeight: '600' } }>{ coin }</Typography>
                         </ExpansionPanelSummary>
                         <ExpansionPanelDetails>
-                            <LineChart data={this.state.coinData} coinName={coin} />
+                            <LineChart data={ this.state.coinData } coinName={ coin } />
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
                 </div>

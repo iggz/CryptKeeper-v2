@@ -1,6 +1,7 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 
+import moment from 'moment';
 
 
 
@@ -27,7 +28,8 @@ export default function LineChart(props) {
         pointHitRadius: 10,
     };
 
-    const labels = props.data.map(priceTime => priceTime.time)
+
+    const labels = props.data.map(priceTime => moment.unix(priceTime.time/1000).format('MM/DD/YYYY'));
     const prices = props.data.map(priceTime => priceTime.priceUsd)
     const data = {
         labels,

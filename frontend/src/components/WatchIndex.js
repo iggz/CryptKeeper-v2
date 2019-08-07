@@ -44,21 +44,21 @@ class WatchIndex extends Component {
         if (this.state.rendered) {
             return (
                 <>
-                    {this.state.list.map((item, index) => (
-                        < div border={10} key={index} >
-                            <div style={{ height: .5, background: '#00C689' }}></div>
+                    { this.state.list.map((item, index) => (
+                        < div border={ 10 } key={ index } >
+                            <div style={ { height: .5, background: '#00C689' } }></div>
                             <WatchExpansionPanel
-                                dataArray={[]}
-
-                                id={item.id}
-                                name={item.name}
-                                ticker={item.ticker}
+                                dataArray={ [] }
+                                style={ { background: '#09171E' } }
+                                id={ item.id }
+                                name={ item.name }
+                                ticker={ item.ticker }
 
                             />
-                            <div style={{ height: .5, background: '#00C689' }}></div>
+                            <div style={ { height: .5, background: '#00C689' } }></div>
                         </div>
 
-                    ))}
+                    )) }
 
                 </>
             )

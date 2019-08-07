@@ -6,6 +6,7 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
+// import { flexbox } from '@material-ui/system';
 
 class AddUserModal extends Component {
     constructor(props) {
@@ -95,12 +96,12 @@ class AddUserModal extends Component {
 
     render() {
         return (
-            <div>
-                <Button variant="outlined" color="primary" onClick={this.handleOpen}>
+            <div >
+                <Button variant="outlined" color="primary" onClick={ this.handleOpen }>
                     Add User
                 </Button>
-                <Dialog open={this.state.open} aria-labelledby="form-dialog-title">
-                    <form onSubmit={this.handleSubmit}>
+                <Dialog open={ this.state.open } aria-labelledby="form-dialog-title">
+                    <form onSubmit={ this.handleSubmit }>
                         <DialogTitle id="form-dialog-title">Add User</DialogTitle>
                         <DialogContent>
                             <TextField
@@ -110,8 +111,8 @@ class AddUserModal extends Component {
                                 type="text"
                                 margin="dense"
                                 fullWidth
-                                onChange={this.handleFirstName}
-                                value={this.state.firstName}
+                                onChange={ this.handleFirstName }
+                                value={ this.state.firstName }
                             />
                             <TextField
                                 name="lastName"
@@ -119,8 +120,8 @@ class AddUserModal extends Component {
                                 type="text"
                                 margin="dense"
                                 fullWidth
-                                onChange={this.handleLastName}
-                                value={this.state.lastName}
+                                onChange={ this.handleLastName }
+                                value={ this.state.lastName }
                             />
                             <TextField
                                 name="email"
@@ -128,8 +129,8 @@ class AddUserModal extends Component {
                                 type="email"
                                 margin="dense"
                                 fullWidth
-                                onChange={this.handleEmail}
-                                value={this.state.email}
+                                onChange={ this.handleEmail }
+                                value={ this.state.email }
                             />
                             <TextField
                                 name="password"
@@ -137,12 +138,12 @@ class AddUserModal extends Component {
                                 type="password"
                                 margin="dense"
                                 fullWidth
-                                onChange={this.handlePassword}
-                                value={this.state.password}
+                                onChange={ this.handlePassword }
+                                value={ this.state.password }
                             />
                         </DialogContent>
                         <DialogActions>
-                            <Button type="submit" value="Submit" onClick={this.handleClose} color="primary">
+                            <Button type="submit" value="Submit" onClick={ this.handleClose } color="primary">
                                 Add User
                             </Button>
                         </DialogActions>
