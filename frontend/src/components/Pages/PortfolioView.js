@@ -171,8 +171,8 @@ class PortfolioView extends Component {
                             </BaseTemplate>)
                 ) : (
                         <BaseTemplate>
-                            <h1>Portfolio List View</h1>
-                            <p>You are currently not logged in. Please login or create a user and login.</p>
+                            <h1 style={ { background: '#0D1C25', margin: 0, height: 60, color: '#3F51B5', textAlign: 'center', padding: 10 } }>Portfolio List View</h1>
+                            <p style={ { background: '#1e2632', margin: 0, height: 60, color: '#3F51B5', textAlign: 'center', padding: 10 } }>You are currently not logged in. Please login or create a user and login.</p>
                         </BaseTemplate>
                     ) }
             </>

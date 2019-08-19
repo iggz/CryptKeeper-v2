@@ -98,11 +98,11 @@ class AddUserModal extends Component {
         return (
             <div >
                 <Button variant="outlined" color="primary" onClick={ this.handleOpen }>
-                    Add User
+                    Sign Up
                 </Button>
                 <Dialog open={ this.state.open } aria-labelledby="form-dialog-title">
                     <form onSubmit={ this.handleSubmit }>
-                        <DialogTitle id="form-dialog-title">Add User</DialogTitle>
+                        <DialogTitle id="form-dialog-title">Sign Up</DialogTitle>
                         <DialogContent>
                             <TextField
                                 autoFocus
@@ -144,7 +144,7 @@ class AddUserModal extends Component {
                         </DialogContent>
                         <DialogActions>
                             <Button type="submit" value="Submit" onClick={ this.handleClose } color="primary">
-                                Add User
+                                Sign Up
                             </Button>
                         </DialogActions>
                     </form>

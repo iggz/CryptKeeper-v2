@@ -37,11 +37,11 @@ class BaseTemplate extends Component {
 
     render() {
         return (
-            <div style={{ height: '100%' }} ref={this.div}>
+            <div style={ { height: '100%', background: '#09171E' } } ref={ this.div }>
                 <Box display="flex" flexDirection="column">
                     <SearchAppBar
-                        userPage={this.state.userPage}
-                        portfolioPage={this.state.portfolioPage}
+                        userPage={ this.state.userPage }
+                        portfolioPage={ this.state.portfolioPage }
                     />
                     <Box flex="1"
                         overflow="auto"
@@ -49,21 +49,25 @@ class BaseTemplate extends Component {
                         flexDirection="column"
                         alignItems="stretch"
                     >
-                        {this.state.dimensions ? (
+                        { this.state.dimensions ? (
                             <>
                                 <Box
-                                    style={{
+                                    style={ {
                                         marginTop: `${this.state.dimensions[1]}px`,
                                         marginBottom: `${this.state.dimensions[3]}px`
-                                    }}
+                                    } }
                                 >
-                                    {this.props.children}
+                                    { this.props.children }
                                 </Box>
+
                             </>
                         ) : (
                                 <></>
-                            )}
+                            ) }
                     </Box>
+                    <div style={ { height: '100%', background: '#09171E' } }>
+
+                    </div>
 
                     <LabelBottomNavigation />
                 </Box>

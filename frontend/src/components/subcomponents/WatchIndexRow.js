@@ -54,8 +54,8 @@ class WatchIndexRow extends Component {
             )
         } else {
             return (
-                <div>
-                    <h1>Loading, please be patient!</h1>
+                <div style={ { background: '#09171E' } }>
+                    <h1 style={ { color: '#3F51B5', } }>Loading, please be patient!</h1>
                 </div>
             )
         }

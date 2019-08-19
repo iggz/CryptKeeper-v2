@@ -15,7 +15,7 @@ const UserProfileView = () => {
         <BaseTemplate userPage={ userPage }>
             <div style={ { height: '100vh', background: '#0D1C25' } }>
                 <h1 style={ { display: 'flex', justifyContent: 'center', color: '#3F51B5', margin: 0, height: 50 } }>User Profile View</h1>
-                <div style={ { display: 'flex', justifyContent: 'space-between' } }>
+                <div style={ { display: 'flex', justifyContent: 'space-between', padding: 15 } }>
                     <DeleteUserModal />
                     <AddUserModal />
                 </div>

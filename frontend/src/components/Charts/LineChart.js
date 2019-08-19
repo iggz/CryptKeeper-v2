@@ -3,9 +3,6 @@ import { Line } from 'react-chartjs-2';
 
 import moment from 'moment';
 
-
-
-
 export default function LineChart(props) {
     const lineGraphData = {
         label: `${props.coinName}`,
@@ -29,7 +26,7 @@ export default function LineChart(props) {
     };
 
 
-    const labels = props.data.map(priceTime => moment.unix(priceTime.time/1000).format('MM/DD/YYYY'));
+    const labels = props.data.map(priceTime => moment.unix(priceTime.time / 1000).format('MM/DD/YYYY'));
     const prices = props.data.map(priceTime => priceTime.priceUsd)
     const data = {
         labels,
@@ -70,6 +67,5 @@ export default function LineChart(props) {
             } } />
         </div>
     );
-
 };
 
