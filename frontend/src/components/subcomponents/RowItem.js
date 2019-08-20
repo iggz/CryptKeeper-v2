@@ -18,7 +18,7 @@ const RowItem = (props) => {
     return (
         <div className="flex-Wrapper">
             <p style={ { textAlign: 'right', margin: 0, alignItem: 'center', thousandSeparator: 'true' } }>{ currentPrice } </p>
-            <p style={ { textAlign: 'right', margin: 0, alignItem: 'center', color: props.data.percent_change > 0 ? '#00C689' : 'red' } }>{ props.data.percent_change }</p>
+            <p style={ { textAlign: 'right', margin: 0, alignItem: 'center', color: props.data.percent_change > '0%' ? '#00C689' : 'red' } }>{ props.data.percent_change }</p>
         </div>
     )
 }
